@@ -49,6 +49,9 @@ export const authOptions: NextAuthOptions = {
     }),
   },
   adapter: DrizzleAdapter(db, mysqlTable),
+  pages: {
+    signIn: '/sign-in',
+  },
   providers: [
     GitHubProvider({
       clientId: env.GITHUB_ID,

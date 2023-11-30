@@ -1,4 +1,4 @@
-import "~/styles/globals.css";
+import "~/global/styles/globals.css";
 
 import { Inter } from "next/font/google";
 import { cookies } from "next/headers";
@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>
+      <body className={`font-sans ${inter.variable} dark bg-background text-foreground overflow-hidden`}>
         <TRPCReactProvider cookies={cookies().toString()}>
           {children}
         </TRPCReactProvider>
