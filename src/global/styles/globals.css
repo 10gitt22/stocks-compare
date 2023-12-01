@@ -72,4 +72,24 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  ::-webkit-scrollbar {
+    /* Customize the scrollbar width */
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    /* Customize the scrollbar track */
+    width: 100%;
+    display: block;
+    background-color: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /* Customize the scrollbar thumb */
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+    background-color: hsl(var(--muted-foreground));
+  }
 }
