@@ -16,6 +16,9 @@
     --primary: 270 59% 55%;
     --primary-foreground: 355.7 100% 97.3%;
 
+    --primary2: 336 78% 42%;
+    --primary2-foreground: 355.7 100% 97.3%;
+
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
 
@@ -46,6 +49,9 @@
 
     --primary: 270 59% 55%;
     --primary-foreground: 355.7 100% 97.3%;
+
+    --primary2: 336 78% 42%;
+    --primary2-foreground: 355.7 100% 97.3%;
 
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;

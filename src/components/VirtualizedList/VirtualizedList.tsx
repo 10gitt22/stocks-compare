@@ -9,7 +9,7 @@ import {
 import { cn } from "~/global/utils";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { Check } from "lucide-react";
-import * as React from "react";
+import { useRef, useState } from "react";
 
 type Option = {
   value: string;
@@ -33,9 +33,8 @@ export const VirtualizedList = ({
   selectedOption,
   onSelectOption,
 }: VirtualizedListProps) => {
-  const [filteredOptions, setFilteredOptions] =
-    React.useState<Option[]>(options);
-  const parentRef = React.useRef(null);
+  const [filteredOptions, setFilteredOptions] = useState<Option[]>(options);
+  const parentRef = useRef(null);
 
   const virtualizer = useVirtualizer({
     count: filteredOptions.length,
@@ -81,7 +80,7 @@ export const VirtualizedList = ({
         style={{
           height: height,
           width: "100%",
-          overflow: "auto",
+          overflowY: "auto",
         }}
       >
         <div
@@ -89,6 +88,7 @@ export const VirtualizedList = ({
             height: `${virtualizer.getTotalSize()}px`,
             width: "100%",
             position: "relative",
+            contain: 'strict'
           }}
         >
           {virtualOptions.map((virtualOption) => {

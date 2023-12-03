@@ -2,6 +2,7 @@
 import { redirect } from "next/navigation";
 import { Header } from "~/components/Header"
 import { getServerAuthSession } from "~/server/auth";
+
 export default async function DashboardLayout({
   children,
 }: {
