@@ -23,7 +23,7 @@ export default async function Home({
       <StocksFilter
         stock1={searchParams?.symbol}
         stock2={'SPY'}
-        width="300px"
+        width="500px"
         startDate={searchParams?.start}
         endDate={searchParams?.end}
       />
