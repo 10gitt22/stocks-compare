@@ -1,6 +1,6 @@
 
 import { redirect } from "next/navigation";
-import { SignInGithub } from "~/components/SignInGithub";
+import { SignInGithub } from "~/components/SignInOptions/SignInGithub";
 import { getServerAuthSession } from "~/server/auth";
 
 export default async function SignIn() {

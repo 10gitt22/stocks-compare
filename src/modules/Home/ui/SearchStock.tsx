@@ -3,7 +3,6 @@
 import {
   type Dispatch,
   type SetStateAction,
-  useEffect,
   useState
 } from "react";
 

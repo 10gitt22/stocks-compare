@@ -5,12 +5,12 @@ import {
   type FC,
 } from "react"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { addDays, subDays } from "date-fns"
 
-import { SearchStock } from "./SearchStock"
-import { SelectDateRange } from "./SelectDateRange"
 import { type DateRange } from "react-day-picker"
-import { addDays } from "date-fns"
+import { SelectDateRange } from "~/components/SelectDateRange/SelectDateRange"
 import { Button } from "~/ui/Button"
+import { SearchStock } from "./SearchStock"
 import { cn } from "~/global/utils"
 
 const transformDateToISOWithoutTime = (date: Date): string => {
@@ -42,8 +42,8 @@ export const StocksFilter: FC<StocksFilter> = ({
 
 
   const [dateRange, setDateRange] = useState<DateRange | undefined>({
-    from: startDate ? new Date(startDate) : new Date(),
-    to: addDays(endDate ? new Date(endDate) : new Date(), 3),
+    from: startDate ? new Date(startDate) : subDays(new Date(), 3),
+    to: endDate ? new Date(endDate) : new Date(),
   })
 
   const handleSubmit = () => {

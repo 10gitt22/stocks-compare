@@ -9,23 +9,6 @@ import { useIsClient } from 'usehooks-ts'
 import { type StockData, type StockPriceData } from '~/server/api/routers/stock'
 import { Skeleton } from '~/ui/Skeleton'
 
-// type Stock = {
-//   symbol: string,
-//   history: {
-//     day: StockPriceData[]
-//   }
-// }
-
-// type StockPriceData = {
-//   date: string
-//   open: number
-//   high: number
-//   low: number
-//   close: number
-//   volume: number
-// }
-
-
 type CompareStocksChartProps = {
   data1: StockData
   data2: StockData

@@ -17,7 +17,6 @@ type Option = {
   priority?: number
 };
 
-
 interface VirtualizedListProps {
   height: string;
   options: Option[];
@@ -57,12 +56,6 @@ export const VirtualizedList = ({
     })
 
     setFilteredOptions(filteredArr)
-    // ================   OLD   =================
-    // setFilteredOptions(
-    //   options.filter((option) => {
-    //     option.value.toLowerCase().includes(search.toLowerCase() ?? [])
-    //   })
-    // );
   };
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
